@@ -1,0 +1,116 @@
+openapi: 3.1.0
+info:
+  title: NDE Termennetwerk
+  description: |-
+    Lookup terms of places, persons, dates, organisations, events and concepts via the NDE Network of Terms in authorative thesauri.
+  contact:
+    email: bob@coret.org
+  version: 0.1.0
+externalDocs:
+  description: This experimental REST API is an proxy to the official GraphQL API of the Network of Terms
+  url: https://termennetwerk-api.netwerkdigitaalerfgoed.nl/graphiql
+servers:
+  - url: https://not-rest-proxy.coret.org/
+paths:
+  /lookup.php:
+    get:
+      operationId: lookup
+      x-openai-isConsequential: false
+      summary: Lookup a term (at least the label and URI) in thesauri of the required entity type via the Network of Terms.
+      parameters:
+        - name: type
+          in: query
+          description: type of term, being a place (GPE), a person (PERSONS), a date (DATE), an organization (ORG), an event (EVENT) or a concept (CONCEPT)
+          required: true
+          schema:
+            type: string
+            enum: 
+             - GPE 
+             - PERSON
+             - DATE 
+             - ORG 
+             - EVENT 
+             - CONCEPT 
+        - name: term
+          in: query
+          description: term to lookup
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkOfTermsResponse'
+components:
+  schemas:
+    NetworkOfTermsResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/NetworkOfTermsResponseData'
+    NetworkOfTermsResponseData:
+      type: object
+      properties:
+        terms:
+          $ref: '#/components/schemas/NetworkOfTermsResponseTerms'
+    NetworkOfTermsResponseTerms:
+      type: object
+      properties:
+        source:
+          $ref: '#/components/schemas/NetworkOfTermsResponseSource'
+        result:
+          $ref: '#/components/schemas/NetworkOfTermsResponseResult'
+    NetworkOfTermsResponseSource:
+      type: object
+      properties:
+        terms:
+          type: string
+          description: Name of the thesaurus where the term was looked up in
+        uri:
+          type: string
+          description: The URL of the thesaurus
+    NetworkOfTermsResponseResult:
+      type: array
+      items:
+       $ref: '#/components/schemas/NetworkOfTermsResultTerms'
+    NetworkOfTermsResultTerms:
+      type: object
+      properties:
+        uri:
+          type: string
+          description: the URI of the term
+        prefLabel:
+          type: array
+          description: the prefered label of the term
+          items:
+            type: string
+        altLabel:
+          type: array
+          description: alternate labels for the term
+          items:
+            type: string
+        scopeNote:
+          type: array
+          description: a note that helps to clarify the meaning and/or the use of a term
+          items:
+            type: string
+        broader:
+          description: terms which are  broader in meaning (i.e. more general)
+          $ref: '#/components/schemas/NetworkOfTermsResultTerm'
+        narrower:
+          description: terms which are narrower in meaning (i.e. more specific)
+          $ref: '#/components/schemas/NetworkOfTermsResultTerm'
+    NetworkOfTermsResultTerm:
+      type: object
+      properties:
+        uri:
+          type: string
+          description: the URI of the term
+        prefLabel:
+          type: array
+          items:
+            type: string
+          description: the prefered label of the term

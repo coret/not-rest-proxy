@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "NDE Termennetwerk",
+    "name_for_model": "termennetwerk",
+    "description_for_human": "Zoek plaatsen, personen, datums, organisaties, gebeurtenissen en concepten op via het NDE Termennetwerk.",
+    "description_for_model": "Plugin for looking up the prefered label and URI of a term in thesauri via the NDE Network of Terms.",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "https://not-rest-proxy.coret.org/openapi.yaml"
+    },
+    "logo_url": "https://not-rest-proxy.coret.org/logo-nde.png",
+    "contact_email": "bob@coret.org",
+	"legal_info_url": "https://not-rest-proxy.coret.org/"
+}

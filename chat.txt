@@ -1,0 +1,15 @@
+Vind alle plaatsnamen in de volgende tekst en zoek deze op via het termennetwerk, voeg aan de tekst een link toe naar de gevonden URI.<br><br>Het gaat om de volgende tekst: "Het stadhuis van Veere. Laatgotisch gebouw, in 1474 begonnen. Waarschijnlijk ontworpen door mr Evert Spoorwater, geboren te Gouda. De gevel van gobertangersteen is nog vrijwel geheel in de oorspronkelijke toestand. Zij vertoont uitgekraagde hoektorentjes, stenen kruiskozijnen overdekt met korfbogen, waarin verdiepte velden versierd met gotische traceringen, en nissen in de vensterdammen op de verdieping. De oorspronkelijke beelden, in 1517 vervaardigd door Michiel Ywijns, zijn uit de nissen verwijderd en vervangen door replieken van de hand van O. Wenckebach uit Amersfoort, welke heren en vrouwen van Veere voorstellen. Een bordes uit 1588, in 1749 gewijzigd in Lodewijk XIV stijl, geeft toegang tot de hoofdingang, terwijl in het travee rechts van de ingangspartij het venster geflankeerd wordt door twee beeldnissen. De traptoren, aangebouwd tegen de bakstenen achtergevel en behorend bij het oorspronkelijke plan, werd na 1591 gedeeltelijk afgebroken en tussen 1594 en 1599 vervangen door een slanke bovenbouw, die ontworpen is door Adriaen de Muer, geboortig uit Brugge."
+
+Vind alle persoonsnamen in de opgegeven tekst en zoek deze op in het termennetwerk, geef de resultaten in tabelvorm weer met als kolommen naam, URI en bron.
+
+Vind alle concepten in de opgegeven tekst en zoek deze op in het termennetwerk.
+
+Idem voor alle stijlperioden.
+
+Zijn er ook alternatieve benoemingen van deze termen?
+
+Wat zijn van de gevonden termen de bredere termen?
+
+Wat is de Geonames URI van de Amsterdam?
+
+En het Q nummer van Gouda?
