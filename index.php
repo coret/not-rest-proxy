@@ -54,6 +54,7 @@
 					</ul>
 					<h5>Github</h5>
 					<ul>
+						<li><a href="https://github.com/coret/not-rest-proxy">not-rest-proxy</a>, Bob Coret (2024)</li>
 						<li><a href="https://github.com/EnnoMeijers/ner-not-pipeline">ner-not-pipeline</a>, Enno Meijers (2024)</li>
 						<li><a href="https://github.com/vblagoje/openapi-rag-service">openapi-rag-service</a>, Vladimir Blagojevic (2024)
 					</ul>
